@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F84983BF-C1C5-4DC9-805B-1BE0A2B882FA}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{89a4fe7c-635d-49c9-8d8c-5cd363c0d68d}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Appssss.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Appssss.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <ProvisioningType>automatic</ProvisioningType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>Apple Development: LE MINH TUAN %28X68LCFHAX4%29</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchInterpreter>-all</MtouchInterpreter>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="MyTabDotRenderer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\FontAwesome.otf" />
+    <BundleResource Include="Resources\materialicon.ttf" />
+    <BundleResource Include="Resources\robotolight.ttf" />
+    <BundleResource Include="Resources\robotomedium.ttf" />
+    <InterfaceDefinition Include="Resources\StoryboardOke.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <BundleResource Include="Resources\icon_about.png" />
+    <BundleResource Include="Resources\icon_about%402x.png" />
+    <BundleResource Include="Resources\icon_about%403x.png" />
+    <BundleResource Include="Resources\icon_feed.png" />
+    <BundleResource Include="Resources\icon_feed%402x.png" />
+    <BundleResource Include="Resources\icon_feed%403x.png" />
+    <BundleResource Include="Resources\xamarin_logo.png" />
+    <BundleResource Include="Resources\xamarin_logo%402x.png" />
+    <BundleResource Include="Resources\xamarin_logo%403x.png" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Plugin.FirebasePushNotification">
+      <Version>3.1.6</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Appssss\Appssss.csproj">
+      <Project>{D1F32202-56A2-477A-8861-84413959D515}</Project>
+      <Name>Appssss</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\checksuccess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cmtstoreus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\config_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\couponlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\discountbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\email_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\feeds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\feeds%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\feeds%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\feeds_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\feeds_selected%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\feeds_selected%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fiverating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\followstore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fourrating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fourstep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gifthunter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gifttop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\home_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\homeicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\homeicon%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\homeicon%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\homeicon_selected%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\homeicon_selected%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\homepage_cover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\invitefriend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\itemorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\levelbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\linefortress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\list_customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\list_order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\list_product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\listdiscount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\money_bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\money_review.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\money_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\moneyaccount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\moneybox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\moneymap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\moneys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\moneys%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\moneys%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\moneys_selected%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\moneys_selected%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\moneystore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\moneytop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monney.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\myavatarstore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\notificationlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\nowifigray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\nowifiwhile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\onerating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ordercancer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ordercheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\orderlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\orderlistmoney.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\orderlistuser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\partner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\password_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\paycod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\paymethods.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\paymomo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\phone_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\phone_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\poinlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pointtop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\processingorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\prodstoreus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\products.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ratingprd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ratingstore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ratingstoreus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\reviewbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ringblack_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\saleboxicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\searchblack_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\shoppingguide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splashscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splashscreen%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splashscreen-568h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splashscreen-Portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splashscreen-Portrait%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\statistical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\storeavatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\storeshop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\sumratingstore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_feed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\threerating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\top1store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\top2store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\top3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\top3store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\topstore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\transportedorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\trolley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tutorial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tworating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\unrating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\usericon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\usericon%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\usericon%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\usericon_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\usericon_selected%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\usericon_selected%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\warehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\welcomeback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\writereview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\address.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ads_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bg_invite_friend.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\birthday_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bonus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cartnull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chats%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chats%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chats_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chats_selected%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chats_selected%403x.png" />
+  </ItemGroup>
+</Project>

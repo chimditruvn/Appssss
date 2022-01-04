@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:Appssss.Views"
+            x:Class="Appssss.Views.Mainview">
+  <!--Pages can be added as references or inline-->
+    <views:AboutPage Title="Page 1" IconImageSource="homeicon" BackgroundColor="#fff"/>
+    <views:LoginPage Title="Page 2" IconImageSource="feeds" BackgroundColor="#fff"/>
+    <views:AboutPage Title="Page 3" IconImageSource="moneys" BackgroundColor="#fbfbfb" />
+    <views:AboutPage Title="Page 4" IconImageSource="chats" BackgroundColor="#fff" />
+    <views:AboutPage Title="Page 5" IconImageSource="usericon" BackgroundColor="#fff"/>
+</TabbedPage>
