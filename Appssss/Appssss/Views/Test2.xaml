@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="Appssss.Views.Test2">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ControlTemplate
+                x:Key="TabItemTemplate">
+                <Label
+                        HorizontalOptions="Center"
+                        Text="{TemplateBinding Text}"
+                        TextTransform="Default"
+                        VerticalOptions="CenterAndExpand"
+                    FontSize="15"
+                        FontFamily="RobotoMedium"
+                        TextColor="{TemplateBinding CurrentTextColor}" />
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <xct:TabView TabStripPlacement="Top" TabStripBackgroundColor="#fff" TabIndicatorColor="#4691f7" TabContentBackgroundColor="#f7f7f7">
+            <xct:TabViewItem Text="Mới" ControlTemplate="{StaticResource TabItemTemplate}" TextColor="#393f57" TextColorSelected="#4691f7">
+                <Label Text="01"/>
+            </xct:TabViewItem>
+            <xct:TabViewItem Text="Của bạn" ControlTemplate="{StaticResource TabItemTemplate}" TextColor="#393f57" TextColorSelected="#4691f7">
+                <Label Text="02"/>
+            </xct:TabViewItem>
+        </xct:TabView>
+    </ContentPage.Content>
+</ContentPage>

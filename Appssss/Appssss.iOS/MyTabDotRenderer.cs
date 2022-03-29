@@ -27,9 +27,9 @@ namespace Appssss.iOS
             MessagingCenter.Subscribe<object, int>(this, "Add", (obj, index) => {
                 TabBar.addItemBadge(index);
             });
-            MessagingCenter.Subscribe<object, int>(this, "Remove", (obj, index) => {
-                TabBar.removeItemBadge(index);
-            });
+            //MessagingCenter.Subscribe<object, int>(this, "Remove", (obj, index) => {
+            //    TabBar.removeItemBadge(index);
+            //});
         }
 
         public override void ViewWillAppear(bool animated)

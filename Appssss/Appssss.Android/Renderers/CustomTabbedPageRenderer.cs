@@ -21,18 +21,68 @@ using View = Android.Views.View;
 [assembly: ExportRenderer(typeof(TabbedPage), typeof(CustomTabbedPageRenderer))]
 namespace Appssss.Droid.Renderers
 {
-    public class CustomTabbedPageRenderer : TabbedPageRenderer, IOnTabSelectedListener
+    public class CustomTabbedPageRenderer : TabbedPageRenderer
     {
         TabbedPage tabbedPage;
+        List<Android.Views.View> list = new List<Android.Views.View>();
         public CustomTabbedPageRenderer(Context context) : base(context)
         {
-
+            for (int i = 0; i < 5; i++)
+            {
+                Android.Views.View view = LayoutInflater.From(Context).Inflate(Resource.Drawable.MyView, null);
+                list.Add(view);
+            }
         }
         protected override void OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs<Xamarin.Forms.TabbedPage> e)
         {
             base.OnElementChanged(e);
+
+            if (e.NewElement == null || e.OldElement != null)
+                return;
+
             if (e.NewElement != null)
             {
+                MessagingCenter.Subscribe<object, int>(this, "Add", (obj, index) => {
+                    TabLayout tablayout = (TabLayout)ViewGroup.GetChildAt(1);
+                    ViewGroup vgroup = (ViewGroup)tablayout.GetChildAt(0);
+                    for (int i = 0; i < vgroup.ChildCount; i++)
+                    {
+                        if (index == i)
+                        {
+                            var view = list[i];
+                            if (view.Parent != null) break;
+                            ViewGroup vvgroup = (ViewGroup)vgroup.GetChildAt(i);
+                            MarginLayoutParams layout1 = new MarginLayoutParams(MarginLayoutParams.MatchParent, MarginLayoutParams.MatchParent);
+                            layout1.SetMargins(120, -135, 0, 0);
+                            vvgroup.AddView(view, layout1);
+
+                            var ll = vvgroup.LayoutParameters as LinearLayout.LayoutParams;
+                            ll.SetMargins(0, 30, 0, 0);
+                            vvgroup.LayoutParameters = ll;
+                        }
+                    }
+                });
+                MessagingCenter.Subscribe<object, int>(this, "Remove", (obj, index) => {
+                    TabLayout tablayout = (TabLayout)ViewGroup.GetChildAt(1);
+                    ViewGroup vgroup = (ViewGroup)tablayout.GetChildAt(0);
+                    for (int i = 0; i < vgroup.ChildCount; i++)
+                    {
+                        if (index == i)
+                        {
+                            var view = list[i];
+                            if (view.Parent == null) break;
+                            ViewGroup vvgroup = (ViewGroup)vgroup.GetChildAt(i);
+                            vvgroup.RemoveView(view);
+
+                            var ll = vvgroup.LayoutParameters as LinearLayout.LayoutParams;
+                            ll.SetMargins(0, 0, 0, 0);
+                            vvgroup.LayoutParameters = ll;
+                        }
+                    }
+                });
+
+
+
                 IEnumerable<View> children = GetAllChildViews(ViewGroup);
                 BottomNavigationView bottomNavBar = (BottomNavigationView)children.SingleOrDefault(view => view is BottomNavigationView);
                 if (bottomNavBar != null)
@@ -72,30 +122,31 @@ namespace Appssss.Droid.Renderers
             IMenu menu = previousView.Menu;
             var previousItem = menu.GetItem(previous);
 
-            if (previousItem.IsChecked)
+            if (previous != current)
             {
-                switch (previousItem.ToString())
+                if (previousItem.IsChecked)
                 {
-                    case "Page 1":
-                        previousItem.SetIcon(Resource.Drawable.homeicon);
-                        break;
-                    case "Page 2":
-                        previousItem.SetIcon(Resource.Drawable.feeds);
-                        break;
-                    case "Page 3":
-                        previousItem.SetIcon(Resource.Drawable.moneys);
-                        break;
-                    case "Page 4":
-                        previousItem.SetIcon(Resource.Drawable.chats);
-                        break;
-                    case "Page 5":
-                        previousItem.SetIcon(Resource.Drawable.usericon);
-                        break;
-                    default:
-                        break;
+                    switch (previousItem.ToString())
+                    {
+                        case "Page 1":
+                            previousItem.SetIcon(Resource.Drawable.homeicon);
+                            break;
+                        case "Page 2":
+                            previousItem.SetIcon(Resource.Drawable.feeds);
+                            break;
+                        case "Page 3":
+                            previousItem.SetIcon(Resource.Drawable.moneys);
+                            break;
+                        case "Page 4":
+                            previousItem.SetIcon(Resource.Drawable.chats);
+                            break;
+                        case "Page 5":
+                            previousItem.SetIcon(Resource.Drawable.usericon);
+                            break;
+                        default:
+                            break;
+                    }
                 }
-
-
             }
 
             tabbedPage.CurrentPage = tabbedPage.Children[current];
@@ -120,6 +171,5 @@ namespace Appssss.Droid.Renderers
 
             return result.Distinct();
         }
-
     }
 }

@@ -10,7 +10,12 @@ namespace Appssss.Views
         public AboutPage()
         {
             InitializeComponent();
+
             MessagingCenter.Send<object, int>(this, "Add", 1);
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
         }
     }
 }
