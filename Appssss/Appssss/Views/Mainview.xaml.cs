@@ -27,7 +27,6 @@ namespace Appssss.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            MessagingCenter.Send<object, int>(this, "Add", 1);
         }
     }
 }

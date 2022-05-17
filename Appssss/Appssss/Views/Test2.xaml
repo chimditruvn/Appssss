@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             BackgroundColor="#fff"
              x:Class="Appssss.Views.Test2">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -19,7 +20,10 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <xct:TabView TabStripPlacement="Top" TabStripBackgroundColor="#fff" TabIndicatorColor="#4691f7" TabContentBackgroundColor="#f7f7f7">
-            <xct:TabViewItem Text="Tab 1" ControlTemplate="{StaticResource TabItemTemplate}" TextColor="#393f57" TextColorSelected="#4691f7">
+            <xct:TabView.TabIndicatorView>
+                <BoxView BackgroundColor="#0CB498" HeightRequest="3" WidthRequest="{Binding Source={x:Reference tabItemBase}, Path=Width}" />
+            </xct:TabView.TabIndicatorView>
+            <xct:TabViewItem Text="Tab 1" x:Name="tabItemBase" ControlTemplate="{StaticResource TabItemTemplate}" TextColor="#393f57" TextColorSelected="#4691f7">
                 <Label Text="01"/>
             </xct:TabViewItem>
             <xct:TabViewItem Text="Tab 2" ControlTemplate="{StaticResource TabItemTemplate}" TextColor="#393f57" TextColorSelected="#4691f7">

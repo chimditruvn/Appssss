@@ -17,5 +17,19 @@ namespace Appssss.Views
             InitializeComponent();
             MessagingCenter.Send<object, int>(this, "Add", 1);
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            var statusbar = DependencyService.Get<IStatusBarPlatformSpecific>();
+            statusbar.SetStatusBarColor(Color.FromHex("f1f1f1"));
+        }
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            var statusbar = DependencyService.Get<IStatusBarPlatformSpecific>();
+            statusbar.SetStatusBarColor(Color.FromHex("f1f1f1"));
+        }
     }
 }

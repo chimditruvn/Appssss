@@ -16,5 +16,19 @@ namespace Appssss.Views
         {
             InitializeComponent();
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            var statusbar = DependencyService.Get<IStatusBarPlatformSpecific>();
+            statusbar.SetStatusBarColor(Color.FromHex("ffffff"));
+        }
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            var statusbar = DependencyService.Get<IStatusBarPlatformSpecific>();
+            statusbar.SetStatusBarColor(Color.FromHex("ffffff"));
+        }
     }
 }

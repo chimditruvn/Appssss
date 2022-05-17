@@ -20,7 +20,16 @@ namespace Appssss.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            MessagingCenter.Send<object, int>(this, "Add", 1);
+
+            var statusbar = DependencyService.Get<IStatusBarPlatformSpecific>();
+            statusbar.SetStatusBarColor(Color.FromHex("ffffff"));
+        }
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            var statusbar = DependencyService.Get<IStatusBarPlatformSpecific>();
+            statusbar.SetStatusBarColor(Color.FromHex("ffffff"));
         }
     }
 }
