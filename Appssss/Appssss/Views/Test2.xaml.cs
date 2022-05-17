@@ -15,7 +15,6 @@ namespace Appssss.Views
         public Test2()
         {
             InitializeComponent();
-            MessagingCenter.Send<object, int>(this, "Add", 1);
         }
         protected override void OnAppearing()
         {
