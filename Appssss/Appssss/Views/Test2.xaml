@@ -4,31 +4,20 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              BackgroundColor="#fff"
              x:Class="Appssss.Views.Test2">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <ControlTemplate
-                x:Key="TabItemTemplate">
-                <Label
-                        HorizontalOptions="Center"
-                        Text="{TemplateBinding Text}"
-                        TextTransform="Default"
-                        VerticalOptions="CenterAndExpand"
-                    FontSize="15"
-                        TextColor="{TemplateBinding CurrentTextColor}" />
-            </ControlTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
     <ContentPage.Content>
-        <xct:TabView TabStripPlacement="Top" TabStripBackgroundColor="#fff" TabIndicatorColor="#4691f7" TabContentBackgroundColor="#f7f7f7">
-            <xct:TabView.TabIndicatorView>
-                <BoxView BackgroundColor="#0CB498" HeightRequest="3" WidthRequest="{Binding Source={x:Reference tabItemBase}, Path=Width}" />
-            </xct:TabView.TabIndicatorView>
-            <xct:TabViewItem Text="Tab 1" x:Name="tabItemBase" ControlTemplate="{StaticResource TabItemTemplate}" TextColor="#393f57" TextColorSelected="#4691f7">
-                <Label Text="01"/>
-            </xct:TabViewItem>
-            <xct:TabViewItem Text="Tab 2" ControlTemplate="{StaticResource TabItemTemplate}" TextColor="#393f57" TextColorSelected="#4691f7">
-                <Label Text="02"/>
-            </xct:TabViewItem>
-        </xct:TabView>
+        <StackLayout HeightRequest="100">
+            <CollectionView x:Name="_data" HeightRequest="150" ItemsUpdatingScrollMode="KeepItemsInView" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Scrolled="_data_Scrolled">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" SnapPointsType="MandatorySingle" SnapPointsAlignment="Start" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Image HorizontalOptions="Fill" Aspect="AspectFill" Source="{Binding Image}" WidthRequest="200"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

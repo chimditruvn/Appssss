@@ -4,8 +4,4 @@
             x:Class="Appssss.Views.Mainview">
   <!--Pages can be added as references or inline-->
     <views:Test2 Title="Page 1" IconImageSource="homeicon" BackgroundColor="#fff"/>
-    <views:Test2 Title="Page 2" IconImageSource="feeds" BackgroundColor="#fff"/>
-    <views:Test Title="Page 3" IconImageSource="moneys" BackgroundColor="#fbfbfb" />
-    <views:Test3 Title="Page 4" IconImageSource="chats" BackgroundColor="#fff" />
-    <views:Test4 Title="Page 5" IconImageSource="usericon" BackgroundColor="#fff"/>
 </TabbedPage>
